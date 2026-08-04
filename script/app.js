@@ -45,13 +45,36 @@ const renderizar = (data) => {
     contenedor.innerHTML = `
         <section>
             <h2>Titulo: <span>${data.title}</span></h2>
-            <img class="favoritosImagen" src="../assets/images/heart-fill.svg" alt="" />
+            <img id="btnFavorito" class="favoritosImagen" src="./../assets/images/heart.svg" alt="" />
             <h3>Fecha: ${data.date}</h3>
             <img class="imagenApi" src="${data.url}" alt="${data.title}">
             <p class="descripcionApi">${data.explanation}</p>
             <input id="cambiarFecha" type="date" value="${data.date}">
         </section>
     `
+    let favoritoActivo = false;
+    document.getElementById("btnFavorito").addEventListener("click", () => {
+        favoritoActivo = !favoritoActivo;
+
+        if(favoritoActivo){
+            btnFavorito.src = "./../assets/images/heart-fill.svg"
+            Swal.fire({
+                title: "Guardado en favoritos",
+                text: "Puedes ver más artículos guardados",
+                icon: "success"
+            });
+            seccionFavoritos(data)
+        }else{
+            btnFavorito.src = "./../assets/images/heart.svg"
+            Swal.fire({
+                title: "Eliminado de favoritos",
+                text: "Elige otra seccion para guardarlo en favorito",
+                icon: "error"
+            });
+        }
+    })
+
+
     document.getElementById("cambiarFecha").addEventListener("change", (event) => {
         const fecha = event.target.value;
         nuevaImagen(fecha);
@@ -72,8 +95,10 @@ const nuevaImagen = (fecha = "") => {
     })
 }
 
-const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
-
-favoritos.push(data)
-
-localStorage.setItem("favoritos", JSON.stringify(favoritos))
+const seccionFavoritos = (data) => {
+    const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+    
+    favoritos.push(data)
+    
+    localStorage.setItem("favoritos", JSON.stringify(favoritos));
+}
