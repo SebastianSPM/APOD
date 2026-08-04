@@ -4,6 +4,20 @@
     box-sizing: border-box;
 }
 
+html, body{
+    height: 100%;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex: 1;
+}
+
 .enlaces{
     text-decoration: none;
     color: black;
@@ -71,8 +85,7 @@
 
 footer{
     background-color: #2C3B4D;
-    margin: none;
-    padding: none;
+    width: 100%;
 }
 
 footer p{
@@ -83,7 +96,6 @@ footer p{
 }
 
 .contenido{
-    background-color: red;
     align-items: center;
     position: relative;
     display: inline-block;

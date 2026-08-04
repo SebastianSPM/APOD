@@ -5,11 +5,11 @@ Es un programa que publica diariamente una imagen o video astronómico acompaña
 ## Estructura del proyecto
 
 ## Tecnologias usadas
-<br>
+<br />
 HTML
-<br>
+<br />
 CSS
-<br>
+<br />
 JavaScript
 
 ## Pasos para usar
@@ -25,3 +25,4 @@ JavaScript
 - David Quiroz
 - Juan Camilo Acevedo
 - Deyvid Santiago Moreno
+- Felipe Bajarano
