@@ -5,9 +5,11 @@ Es un programa que publica diariamente una imagen o video astronómico acompaña
 ## Estructura del proyecto
 
 ## Tecnologias usadas
-
+<br>
 HTML
+<br>
 CSS
+<br>
 JavaScript
 
 ## Pasos para usar
