@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tituloPagina{
+    margin: 5px;
+}
+
+.tituloPagina:hover{
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    margin: 5px;
+    transition:all 0.3s;
+}
+
+.favoritosImagen{
+    width: 40px;
+    height: 40px;
+}
+
+.favoritosImagen:hover{
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    margin: 5px;
+    transition:all 0.3s;
+}
+
+.imagenApi{
+    margin: 5px;
+    padding: 5px;
+    width: 500px;
+    height: 500px;
+}
+
+#contenedor{
+    margin: 50px;
+}
+
+.descripcionApi{
+    margin: 5px;
+    padding: 5px;
+}
+
+footer{
+    background-color: #2C3B4D;
+    margin: none;
+    padding: none;
+}
+
+footer p{
+    margin: 10px;
+    padding: 10px;
+    color: #FFF;
+    text-align: center;
+}
