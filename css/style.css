@@ -4,29 +4,53 @@
     box-sizing: border-box;
 }
 
+.enlaces{
+    text-decoration: none;
+    color: black;
+}
+
 .tituloPagina{
-    margin: 5px;
+    margin: 10px;
+    font-size: 12px;
 }
 
 .tituloPagina:hover{
     cursor: pointer;
-    width: 45px;
-    height: 45px;
-    margin: 5px;
-    transition:all 0.3s;
+    transform: scale(1.15);
 }
 
 .favoritosImagen{
-    width: 40px;
-    height: 40px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(223, 219, 219, 0.8);
+    padding: 2px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform .3s;
 }
 
 .favoritosImagen:hover{
     cursor: pointer;
-    width: 45px;
-    height: 45px;
-    margin: 5px;
-    transition:all 0.3s;
+    transform: scale(1.15);
+}
+
+.guardadoImagen{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+.guardadoImagen:hover{
+    cursor: pointer;
+    transform: scale(1.15);
 }
 
 .imagenApi{
@@ -56,4 +80,16 @@ footer p{
     padding: 10px;
     color: #FFF;
     text-align: center;
+}
+
+.contenido{
+    background-color: red;
+    align-items: center;
+    position: relative;
+    display: inline-block;
+}
+
+.contenedorImagen{
+    display: flex;
+    justify-content: center;
 }

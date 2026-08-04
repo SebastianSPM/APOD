@@ -45,15 +45,21 @@ const renderizar = (data) => {
     contenedor.innerHTML = `
         <section>
             <h2>Titulo: <span>${data.title}</span></h2>
-            <img id="btnFavorito" class="favoritosImagen" src="./../assets/images/heart.svg" alt="" />
             <h3>Fecha: ${data.date}</h3>
-            <img class="imagenApi" src="${data.url}" alt="${data.title}">
+            <div class="contenedorImagen">
+                <div class="contenido">
+                    <img class="imagenApi" src="${data.url}" alt="${data.title}">
+                    <img id="btnFavorito" class="favoritosImagen" src="./../assets/images/heart.svg" alt="" />
+                </div>
+            </div>
             <p class="descripcionApi">${data.explanation}</p>
             <input id="cambiarFecha" type="date" value="${data.date}">
         </section>
     `
+
     let favoritoActivo = false;
     document.getElementById("btnFavorito").addEventListener("click", () => {
+
         favoritoActivo = !favoritoActivo;
 
         if(favoritoActivo){
@@ -71,15 +77,26 @@ const renderizar = (data) => {
                 text: "Elige otra seccion para guardarlo en favorito",
                 icon: "error"
             });
+            eliminarFavorito()
         }
     })
-
 
     document.getElementById("cambiarFecha").addEventListener("change", (event) => {
         const fecha = event.target.value;
         nuevaImagen(fecha);
     });
 }
+
+const guardado = document.getElementById("guardados");
+
+guardado.addEventListener("mouseenter", () => {
+    guardado.src = "./../assets/images/bookmark-fill.svg";
+});
+
+guardado.addEventListener("mouseleave", () => {
+    guardado.src = "./../assets/images/bookmark.svg";
+});
+
 
 const nuevaImagen = (fecha = "") => {
     let urlNormal = `${API}?api_key=${API_KEY}`;
@@ -98,7 +115,13 @@ const nuevaImagen = (fecha = "") => {
 const seccionFavoritos = (data) => {
     const favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
     
-    favoritos.push(data)
+    const seccionExiste = favoritos.some(item => item.date === data.date);
+
+    if(!seccionExiste){
+        favoritos.push(data);
+        localStorage.setItem("favoritos", JSON.stringify(favoritos));
+    }
     
-    localStorage.setItem("favoritos", JSON.stringify(favoritos));
 }
+
+
