@@ -45,7 +45,7 @@ const renderizar = (data) => {
     contenedor.innerHTML = `
         <section>
             <h2>Titulo: <span>${data.title}</span></h2>
-            <img class="favoritosImagen" src="../assets/images/heart-fill.svg" alt="" />
+            <img class="favoritosImagen" src="./../assets/images/heart-fill.svg" alt="" />
             <h3>Fecha: ${data.date}</h3>
             <img class="imagenApi" src="${data.url}" alt="${data.title}">
             <p class="descripcionApi">${data.explanation}</p>
