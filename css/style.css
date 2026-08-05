@@ -70,8 +70,8 @@ main{
 .imagenApi{
     margin: 5px;
     padding: 5px;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
 }
 
 #contenedor{
@@ -104,4 +104,10 @@ footer p{
 .contenedorImagen{
     display: flex;
     justify-content: center;
+}
+
+.card{
+    width: 500px;
+    height: 500px;
+    margin: 20px auto;
 }
