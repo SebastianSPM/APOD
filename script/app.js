@@ -148,9 +148,9 @@ const seccionFavoritos = (data) => {
 
 const eliminarFavorito = (fecha) => {
 
-    favoritos = favoritos.filter(item => item.date !== fecha);
+    favoritoFiltrado = favoritos.filter(item => item.date !== fecha);
 
-    localStorage.setItem("favoritos", JSON.stringify(favoritos));
+    localStorage.setItem("favoritos", JSON.stringify(favoritoFiltrado));
 }
 
 
