@@ -52,7 +52,7 @@ const renderizar = (data) => {
             <div class="contenedorImagen">
                 <div class="contenido">
                     <img class="imagenApi" src="${data.url}" alt="${data.title}">
-                    <img id="btnFavorito" class="favoritosImagen" src="./../assets/images/heart.svg" alt="" />
+                    <img id="btnFavorito" class="favoritosImagen" src="./assets/images/heart.svg" alt="" />
                 </div>
             </div>
             <p class="descripcionApi">${data.explanation}</p>
@@ -67,13 +67,13 @@ const renderizar = (data) => {
     let btnFavorito = document.getElementById("btnFavorito"); 
     let favoritoActivo = favoritos.some(item => item.date === data.date);
 
-    btnFavorito.src = favoritoActivo ? "./../assets/images/heart-fill.svg" : "./../assets/images/heart.svg"
+    btnFavorito.src = favoritoActivo ? "./assets/images/heart-fill.svg" : "./assets/images/heart.svg"
     btnFavorito.addEventListener("click", () => {
 
         favoritoActivo = !favoritoActivo;
 
         if(favoritoActivo){
-            btnFavorito.src = "./../assets/images/heart-fill.svg"
+            btnFavorito.src = "./assets/images/heart-fill.svg"
             Swal.fire({
                 title: "Guardado en favoritos",
                 text: "Puedes ver más artículos guardados",
@@ -81,7 +81,7 @@ const renderizar = (data) => {
             });
             seccionFavoritos(data)
         }else{
-            btnFavorito.src = "./../assets/images/heart.svg"
+            btnFavorito.src = "./assets/images/heart.svg"
             Swal.fire({
                 title: "Eliminado de favoritos",
                 text: "Elige otra seccion para guardarlo en favorito",
@@ -103,11 +103,11 @@ const renderizar = (data) => {
 const guardado = document.getElementById("guardados");
 
 guardado.addEventListener("mouseenter", () => {
-    guardado.src = "./../assets/images/bookmark-fill.svg";
+    guardado.src = "./assets/images/bookmark-fill.svg";
 });
 
 guardado.addEventListener("mouseleave", () => {
-    guardado.src = "./../assets/images/bookmark.svg";
+    guardado.src = "./assets/images/bookmark.svg";
 });
 
 
