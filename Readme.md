@@ -4,22 +4,23 @@ Es un programa que publica diariamente una imagen o video astronómico acompaña
 
 ## Estructura del proyecto
 
-app-nasa
-├───assets
-│   └───images
-│       └───bookmark-fill.svg 
-│       └───bookmark.svg
-│       └───box-arrow-left.svg  
-│       └───heart-fill.svg 
-│       └───heart.svg 
-├───css
-│   └───style.css
-├───html
-│   └───favoritos.html
-└───script
-│   └───app.js
-│   └───favoritos.js
-├───index.html
+<br>
+app-nasa<br>
+├───assets<br>
+│   └───images<br>
+│       └───bookmark-fill.svg <br>
+│       └───bookmark.svg<br>
+│       └───box-arrow-left.svg <br> 
+│       └───heart-fill.svg <br>
+│       └───heart.svg <br>
+├───css<br>
+│   └───style.css<br>
+├───html<br>
+│   └───favoritos.html<br>
+└───script<br>
+│   └───app.js<br>
+│   └───favoritos.js<br>
+├───index.html<br>
 
 
 
